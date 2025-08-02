@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Projetos da Turma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Projetos Cinematográficos da Turma</h1>
+        <p>Clique em um pôster para ver os detalhes do trabalho.</p>
+    </header>
+
+    <main class="gallery-container">
+        <div class="poster" 
+             data-title="A Odisseia da Célula"
+             data-members="Ana, Bruno, Carla"
+             data-subject="Biologia"
+             data-description="Uma análise aprofundada sobre a estrutura e função das células eucariontes, comparando-as a uma jornada épica de descobrimento.">
+            <img src="https://via.placeholder.com/300x450.png?text=Pôster+Projeto+1" alt="Pôster do Projeto 1">
+        </div>
+        <div class="poster"
+             data-title="Revolução Francesa: O Eco da Liberdade"
+             data-members="Daniel, Elisa, Fernando"
+             data-subject="História"
+             data-description="Este trabalho explora as causas, os principais eventos e as consequências duradouras da Revolução Francesa, mostrando como seus ideais ecoam até hoje.">
+            <img src="https://via.placeholder.com/300x450.png?text=Pôster+Projeto+2" alt="Pôster do Projeto 2">
+        </div>
+        <div class="poster"
+             data-title="A Geometria de um Sonho"
+             data-members="Gabriela, Heitor, Íris"
+             data-subject="Matemática"
+             data-description="Uma investigação sobre as formas geométricas presentes na arquitetura modernista, focando nos trabalhos de Oscar Niemeyer.">
+            <img src="https://via.placeholder.com/300x450.png?text=Pôster+Projeto+3" alt="Pôster do Projeto 3">
+        </div>
+        </main>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p><strong>Matéria:</strong> <span id="modal-subject"></span></p>
+            <p><strong>Integrantes:</strong> <span id="modal-members"></span></p>
+            <p><strong>Sinopse:</strong></p>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
