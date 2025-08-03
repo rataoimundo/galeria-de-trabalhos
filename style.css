@@ -249,6 +249,34 @@ header p {
     margin: 25px auto 0 auto;  /* Adiciona espaço em cima e centraliza */
 }
 
+/* ==============================================
+   CORES DE FUNDO SUTIS PARA OS CARDS DAS OBRAS
+   ============================================== */
+
+/* Card com título Azul Petróleo (#005f73) */
+.obra-item:nth-child(5n+1) {
+    background-color: #e6f6f9; 
+}
+
+/* Card com título Vermelho Tomate (#d62828) */
+.obra-item:nth-child(5n+2) {
+    background-color: #fdebe9;
+}
+
+/* Card com título Marrom Terra (#8a5a44) */
+.obra-item:nth-child(5n+3) {
+    background-color: #f9f5f2;
+}
+
+/* Card com título Azul Royal (#4361ee) */
+.obra-item:nth-child(5n+4) {
+    background-color: #eff2ff;
+}
+
+/* Card com título Verde Musgo (#588157) */
+.obra-item:nth-child(5n+5) {
+    background-color: #f3f8f3;
+}
 
 
 
