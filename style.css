@@ -105,3 +105,62 @@ header h1 {
 }
 
 
+
+/* ==================================
+   NOVOS ESTILOS - PODE COLAR NO FINAL
+   ================================== */
+
+/* Ajuste principal para fundo branco e texto escuro */
+body {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333333;           /* Cor padrão do texto (cinza escuro) */
+}
+
+/* Estilo para a nova seção de introdução */
+.introduction {
+    max-width: 800px;
+    margin: 40px auto; /* Centraliza e adiciona espaço */
+    padding: 25px;
+    background-color: #f9f9f9; /* Um cinza muito leve para destacar */
+    border-left: 5px solid #0056b3; /* Uma barra azul à esquerda para charme */
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Estilo para a seção de Obras Adaptadas */
+#obras {
+    max-width: 1200px;
+    margin: 60px auto; /* Mais espaço para separar da galeria */
+    padding: 0 20px;
+}
+
+#obras h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    border-bottom: 3px solid #f0f0f0; /* Linha sutil abaixo do título "Obras" */
+    padding-bottom: 10px;
+}
+
+.obra-item {
+    margin-bottom: 30px; /* Espaço entre cada obra */
+}
+
+.obra-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.obra-item p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555; /* Cinza um pouco mais claro para o resumo */
+}
+
+/* Mágica das cores para os títulos das obras! */
+.obra-item:nth-child(5n+1) h3 { color: #005f73; } /* Azul Petróleo */
+.obra-item:nth-child(5n+2) h3 { color: #d62828; } /* Vermelho Tomate */
+.obra-item:nth-child(5n+3) h3 { color: #8a5a44; } /* Marrom Terra */
+.obra-item:nth-child(5n+4) h3 { color: #4361ee; } /* Azul Royal */
+.obra-item:nth-child(5n+5) h3 { color: #588157; } /* Verde Musgo */
