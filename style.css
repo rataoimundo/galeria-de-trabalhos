@@ -146,22 +146,22 @@ body {
 /* <<< COLE ESTES NOVOS ESTILOS NO LUGAR DOS ANTIGOS >>> */
 
 .lista-obras {
-    display: grid; /* Ativa o layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
-    gap: 40px; /* Define o espaço entre as colunas e linhas */.obra-item {
-    background-color: #fdfdfd; /* Um fundo quase branco para o card */
-    padding: 30px; /* ✅ Ponto principal: cria margens internas, estreitando o texto */
-    border-radius: 8px; /* Cantos arredondados para um visual suave */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Sombra sutil para dar profundidade */
-    transition: transform 0.2s ease-in-out; /* Efeito suave ao passar o mouse */
+    display: flex; /* ✅ Trocamos Grid por Flexbox */
+    flex-wrap: wrap; /* ✅ Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* ✅ A mágica acontece aqui: centraliza os itens na linha */
+    gap: 40px; /* Funciona perfeitamente com Flexbox também */
 }
 
 .obra-item {
-    background-color: #fdfdfd; /* Um fundo quase branco para o card */
-    padding: 30px; /* ✅ Ponto principal: cria margens internas, estreitando o texto */
-    border-radius: 8px; /* Cantos arredondados para um visual suave */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Sombra sutil para dar profundidade */
-    transition: transform 0.2s ease-in-out; /* Efeito suave ao passar o mouse */
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 25px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease-in-out;
+    min-height: 420px; 
+    display: flex; 
+    flex-direction: column;
+    flex: 0 1 380px; /* ✅ Define o tamanho base do card */
 }
 
 .obra-item:hover {
@@ -183,19 +183,5 @@ body {
 .obra-item:nth-child(5n+4) h3 { color: #4361ee; } /* Azul Royal */
 .obra-item:nth-child(5n+5) h3 { color: #588157; } /* Verde Musgo */
 
-/* ==================================
-   RESPONSIVIDADE PARA A GRADE
-   ================================== */
 
-@media (max-width: 900px) {
-    .lista-obras {
-        grid-template-columns: repeat(2, 1fr); /* Em telas médias (tablets), usa 2 colunas */
-    }
-}
-
-@media (max-width: 600px) {
-    .lista-obras {
-        grid-template-columns: 1fr; /* Em telas pequenas (celulares), usa 1 coluna */
-    }
-}
 
