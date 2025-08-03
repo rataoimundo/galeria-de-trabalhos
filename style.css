@@ -11,10 +11,14 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Menor na altura (10px), maior nas laterais (40px) */
+    border-bottom: 4px solid #f0b91a; /* Linha mais grossa e dourada, como no site de referência */
+    width: 100%;
+    box-sizing: border-box; /* Impede que o padding afete a largura total */
+    margin: 0 0 40px 0; /* Remove margem superior e laterais, mantém a inferior */
 }
 
 header h1 {
@@ -198,6 +202,39 @@ header h1 {
     border-bottom: 3px solid #f0f0f0;
     padding-bottom: 10px;
     display: inline-block; /* Faz a borda se ajustar ao tamanho do texto */
+}
+
+/* ==========================
+   NOVOS ESTILOS DO HEADER
+   ========================== */
+
+/* Estilo da Logo */
+.header-logo img {
+    max-height: 55px; /* Defina a altura máxima da sua logo */
+    display: block;
+}
+
+/* Container do título */
+.header-title {
+    text-align: center;
+}
+
+/* Placeholder para garantir que o título fique perfeitamente no centro */
+.header-placeholder {
+    width: 55px; /* Deve ter a mesma largura/altura da logo para um balanço perfeito */
+}
+
+/* Ajuste para o H1 dentro do header */
+header h1 {
+    font-size: 2.2em; /* Um pouco menor para caber melhor */
+    margin: 0;
+}
+
+/* Ajuste para o parágrafo dentro do header */
+header p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #666;
 }
 
 
