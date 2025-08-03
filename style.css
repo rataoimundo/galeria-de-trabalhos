@@ -118,11 +118,11 @@ body {
 
 /* Estilo para a nova seção de introdução */
 .introduction {
-    max-width: 800px;
-    margin: 40px auto; /* Centraliza e adiciona espaço */
+    max-width: 720px; /* Reduzido de 800px para o texto ficar mais estreito */
+    margin: 40px auto;
     padding: 25px;
-    background-color: #f9f9f9; /* Um cinza muito leve para destacar */
-    border-left: 5px solid #0056b3; /* Uma barra azul à esquerda para charme */
+    background-color: #f9f9f9;
+    border-left: 5px solid #0056b3;
     line-height: 1.6;
     font-size: 1.1em;
 }
@@ -148,24 +148,32 @@ body {
 .lista-obras {
     display: grid; /* Ativa o layout em grade */
     grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
-    gap: 40px; /* Define o espaço entre as colunas e linhas */
+    gap: 40px; /* Define o espaço entre as colunas e linhas */.obra-item {
+    background-color: #fdfdfd; /* Um fundo quase branco para o card */
+    padding: 30px; /* ✅ Ponto principal: cria margens internas, estreitando o texto */
+    border-radius: 8px; /* Cantos arredondados para um visual suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Sombra sutil para dar profundidade */
+    transition: transform 0.2s ease-in-out; /* Efeito suave ao passar o mouse */
 }
 
 .obra-item {
-    /* Não precisa mais de margem aqui, o 'gap' cuida disso */
+    background-color: #fdfdfd; /* Um fundo quase branco para o card */
+    padding: 30px; /* ✅ Ponto principal: cria margens internas, estreitando o texto */
+    border-radius: 8px; /* Cantos arredondados para um visual suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Sombra sutil para dar profundidade */
+    transition: transform 0.2s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+
+.obra-item:hover {
+    transform: translateY(-5px); /* Levanta o card levemente ao passar o mouse */
 }
 
 .obra-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px; /* Espaço entre a linha e o resumo abaixo */
-    padding-bottom: 10px; /* Espaço entre o título e a linha abaixo */
-    border-bottom: 2px solid #e0e0e0; /* A linha separadora! */
-}
-
-.obra-item p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    color: #555; /* Cinza um pouco mais claro para o resumo */
+    font-size: 1.6em; /* Ajustado para caber melhor no card */
+    margin-top: 0; /* Remove espaçamento extra no topo do card */
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 /* Mágica das cores para os títulos das obras! */
@@ -190,3 +198,4 @@ body {
         grid-template-columns: 1fr; /* Em telas pequenas (celulares), usa 1 coluna */
     }
 }
+
