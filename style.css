@@ -239,6 +239,15 @@ header p {
     color: #666;
 }
 
+/* Estilo para o parágrafo de detalhes do evento */
+.event-details {
+    color: #003a63;            /* ✅ Cor do texto igual à cor da caixa */
+    text-align: center;        /* Centraliza o texto */
+    font-weight: 600;          /* Deixa a fonte um pouco mais forte (bold) */
+    font-size: 1.1em;
+    max-width: 720px;          /* Define uma largura para não ficar muito extenso */
+    margin: 25px auto 0 auto;  /* Adiciona espaço em cima e centraliza */
+}
 
 
 
