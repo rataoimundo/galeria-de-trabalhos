@@ -212,7 +212,7 @@ header h1 {
 
 /* Estilo da Logo */
 .header-logo img {
-    max-height: 110px; /* Defina a altura máxima da sua logo */
+    max-height: 100px; /* Defina a altura máxima da sua logo */
     display: block;
 }
 
@@ -223,7 +223,7 @@ header h1 {
 
 /* Placeholder para garantir que o título fique perfeitamente no centro */
 .header-placeholder {
-    width: 110px; /* Deve ter a mesma largura/altura da logo para um balanço perfeito */
+    width: 100px; /* Deve ter a mesma largura/altura da logo para um balanço perfeito */
 }
 
 /* Ajuste para o H1 dentro do header */
@@ -238,6 +238,7 @@ header p {
     font-size: 0.9em;
     color: #666;
 }
+
 
 
 
