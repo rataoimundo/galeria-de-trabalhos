@@ -1,7 +1,11 @@
+/* ==================================
+   ESTILO COMPLETO E CORRIGIDO
+   ================================== */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    color: #0c1445;
+    color: #333333;
     margin: 0;
     padding: 20px;
 }
@@ -17,12 +21,87 @@ header h1 {
     font-size: 2.5em;
 }
 
+/* Seção de Introdução */
+.introduction {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #0056b3;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Seção de Obras Adaptadas */
+#obras {
+    max-width: 1400px; /* Largura total aumentada */
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+#obras h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    border-bottom: 3px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Container dos Cards (Flexbox) */
+.lista-obras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Estilo Individual do Card */
+.obra-item {
+    background-color: #fdfdfd;
+    padding: 30px;
+    border-radius: 25px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease-in-out;
+    min-height: 420px; 
+    display: flex; 
+    flex-direction: column;
+    flex: 0 1 300px; /* Tamanho base que deve gerar 4 colunas */
+}
+
+.obra-item:hover {
+    transform: translateY(-5px);
+}
+
+.obra-item h3 {
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.obra-item p {
+    flex-grow: 1;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Cores dos Títulos das Obras */
+.obra-item:nth-child(5n+1) h3 { color: #005f73; }
+.obra-item:nth-child(5n+2) h3 { color: #d62828; }
+.obra-item:nth-child(5n+3) h3 { color: #8a5a44; }
+.obra-item:nth-child(5n+4) h3 { color: #4361ee; }
+.obra-item:nth-child(5n+5) h3 { color: #588157; }
+
+/* Galeria de Pôsteres */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 60px auto;
 }
 
 .poster {
@@ -40,10 +119,10 @@ header h1 {
 
 .poster:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
-/* Estilos da Janela Modal */
+/* Janela Modal (Pop-up) */
 .modal {
     display: none;
     position: fixed;
@@ -63,7 +142,8 @@ header h1 {
 }
 
 .modal-content {
-    background-color: #222;
+    background-color: #fefefe; /* Fundo branco para o modal */
+    color: #333; /* Texto escuro */
     margin: 10% auto;
     padding: 30px;
     border: 1px solid #888;
@@ -90,101 +170,18 @@ header h1 {
 
 .close-button:hover,
 .close-button:focus {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
 .modal-content h2 {
-    color: #e50914; /* Cor inspirada na Netflix */
+    color: #d62828; /* Vermelho para destaque no modal */
 }
 
 .modal-content p {
     line-height: 1.6;
-
 }
-
-
-
-/* ==================================
-   NOVOS ESTILOS - PODE COLAR NO FINAL
-   ================================== */
-
-/* Ajuste principal para fundo branco e texto escuro */
-body {
-    background-color: #ffffff; /* Fundo branco */
-    color: #333333;           /* Cor padrão do texto (cinza escuro) */
-}
-
-/* Estilo para a nova seção de introdução */
-.introduction {
-    max-width: 720px; /* Reduzido de 800px para o texto ficar mais estreito */
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #0056b3;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-/* Estilo para a seção de Obras Adaptadas */
-#obras {
-    max-width: 1400px; /* ✅ Passo 1: Aumentamos o espaço total disponível. */
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-#obras h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #333;
-    border-bottom: 3px solid #f0f0f0; /* Linha sutil abaixo do título "Obras" */
-    padding-bottom: 10px;
-}
-
-/* <<< COLE ESTES NOVOS ESTILOS NO LUGAR DOS ANTIGOS >>> */
-
-.lista-obras {
-    display: flex; /* ✅ Trocamos Grid por Flexbox */
-    flex-wrap: wrap; /* ✅ Permite que os itens quebrem para a próxima linha */
-    justify-content: center; /* ✅ A mágica acontece aqui: centraliza os itens na linha */
-    gap: 40px; /* Funciona perfeitamente com Flexbox também */
-}
-
-.obra-item {
-    background-color: #fdfdfd;
-    padding: 30px;
-    border-radius: 25px; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-    transition: transform 0.2s ease-in-out;
-    min-height: 420px; 
-    display: flex; 
-    flex-direction: column;
-    flex: 0 1 210px; /* ✅ Passo 2: Definimos um tamanho que cabe 4x na prateleira nova. */
-}
-
-.obra-item:hover {
-    transform: translateY(-5px); /* Levanta o card levemente ao passar o mouse */
-}
-
-.obra-item h3 {
-    font-size: 1.6em; /* Ajustado para caber melhor no card */
-    margin-top: 0; /* Remove espaçamento extra no topo do card */
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-/* Mágica das cores para os títulos das obras! */
-.obra-item:nth-child(5n+1) h3 { color: #005f73; } /* Azul Petróleo */
-.obra-item:nth-child(5n+2) h3 { color: #d62828; } /* Vermelho Tomate */
-.obra-item:nth-child(5n+3) h3 { color: #8a5a44; } /* Marrom Terra */
-.obra-item:nth-child(5n+4) h3 { color: #4361ee; } /* Azul Royal */
-.obra-item:nth-child(5n+5) h3 { color: #588157; } /* Verde Musgo */
-
-
-
 
 
 
