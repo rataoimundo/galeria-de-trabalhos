@@ -26,16 +26,18 @@ header h1 {
 }
 
 /* Seção de Introdução */
-.introduction {
-    max-width: 720px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #0056b3;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
 
+.introduction {
+    max-width: 1200px;         /* ✅ Mais largo, indo até mais perto das bordas */
+    margin: 40px auto;
+    padding: 40px;             /* Aumentei o espaço interno para o texto respirar */
+    background-color: #003a63; /* ✅ Cor de fundo azul escuro solicitada */
+    color: #ffffff;            /* ✅ Cor do texto branca */
+    border-radius: 20px;       /* ✅ Pontas bem arredondadas */
+    line-height: 1.7;
+    font-size: 1.1em;
+    text-align: center;        /* Texto centralizado para um visual mais elegante */
+}
 /* Seção de Obras Adaptadas */
 #obras {
     max-width: 1400px; /* Largura total aumentada */
@@ -236,6 +238,7 @@ header p {
     font-size: 0.9em;
     color: #666;
 }
+
 
 
 
