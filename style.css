@@ -161,7 +161,7 @@ body {
     min-height: 420px; 
     display: flex; 
     flex-direction: column;
-    flex: 0 1 380px; /* ✅ Define o tamanho base do card */
+    flex: 0 1 280px; /* ✅ Define o tamanho base do card */
 }
 
 .obra-item:hover {
@@ -182,6 +182,7 @@ body {
 .obra-item:nth-child(5n+3) h3 { color: #8a5a44; } /* Marrom Terra */
 .obra-item:nth-child(5n+4) h3 { color: #4361ee; } /* Azul Royal */
 .obra-item:nth-child(5n+5) h3 { color: #588157; } /* Verde Musgo */
+
 
 
 
