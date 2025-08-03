@@ -143,13 +143,23 @@ body {
     padding-bottom: 10px;
 }
 
+/* <<< COLE ESTES NOVOS ESTILOS NO LUGAR DOS ANTIGOS >>> */
+
+.lista-obras {
+    display: grid; /* Ativa o layout em grade */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
+    gap: 40px; /* Define o espaço entre as colunas e linhas */
+}
+
 .obra-item {
-    margin-bottom: 30px; /* Espaço entre cada obra */
+    /* Não precisa mais de margem aqui, o 'gap' cuida disso */
 }
 
 .obra-item h3 {
     font-size: 1.8em;
-    margin-bottom: 8px;
+    margin-bottom: 15px; /* Espaço entre a linha e o resumo abaixo */
+    padding-bottom: 10px; /* Espaço entre o título e a linha abaixo */
+    border-bottom: 2px solid #e0e0e0; /* A linha separadora! */
 }
 
 .obra-item p {
@@ -164,3 +174,19 @@ body {
 .obra-item:nth-child(5n+3) h3 { color: #8a5a44; } /* Marrom Terra */
 .obra-item:nth-child(5n+4) h3 { color: #4361ee; } /* Azul Royal */
 .obra-item:nth-child(5n+5) h3 { color: #588157; } /* Verde Musgo */
+
+/* ==================================
+   RESPONSIVIDADE PARA A GRADE
+   ================================== */
+
+@media (max-width: 900px) {
+    .lista-obras {
+        grid-template-columns: repeat(2, 1fr); /* Em telas médias (tablets), usa 2 colunas */
+    }
+}
+
+@media (max-width: 600px) {
+    .lista-obras {
+        grid-template-columns: 1fr; /* Em telas pequenas (celulares), usa 1 coluna */
+    }
+}
